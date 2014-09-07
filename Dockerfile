@@ -18,6 +18,7 @@ RUN bash -c 'echo "root:root" | chpasswd'
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ADD .jenkins /tmp/.jenkins
+ONBUILD ADD config.xml /tmp/.jenkins/jobs/job1/config.xml
 
 EXPOSE 22 8080
 
