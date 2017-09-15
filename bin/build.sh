@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build -t jenkins-dind-test .
+TAG=$1
+docker build -t redpandaci/jenkins-dind:$TAG .

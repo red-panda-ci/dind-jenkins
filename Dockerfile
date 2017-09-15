@@ -5,6 +5,8 @@ RUN apt-get -y update
 RUN apt-get install -y unzip
 RUN apt-get install -y  python
 RUN apt-get install -y openjdk-8-jdk-headless
+RUN apt-get install -y build-essential
+
 
 # jenkins
 ENV JENKINS_VERSION 2.60.2

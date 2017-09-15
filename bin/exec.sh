@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec -it test bash
+docker exec -it jenkins bash
