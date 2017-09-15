@@ -13,16 +13,16 @@ RUN apt-get -y update
 RUN apt-get -y install jenkins=$JENKINS_VERSION
 
 # Jenkins Plugins
-COPY install-plugins.sh /usr/local/bin/install-plugins.sh
-COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+COPY src/install-plugins.sh /usr/local/bin/install-plugins.sh
+COPY src/plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN mkdir -p /root/.jenkins/plugins/
 RUN /usr/local/bin/install-plugins.sh --plugins /usr/share/jenkins/ref/plugins.txt --plugindir /root/.jenkins/plugins
 
 # Jenkins avoid 2.x setup wizard but provide secure-by-default
 ENV JENKINS_USER redpanda
 ENV JENKINS_PASS redpanda
-COPY jenkins.install.UpgradeWizard.state /root/.jenkins/jenkins.install.UpgradeWizard.state
-COPY set-user.groovy /root/.jenkins/init.groovy.d/basic-security.groovy
+COPY src/jenkins-version /root/.jenkins/jenkins.install.UpgradeWizard.state
+COPY src/set-user.groovy /root/.jenkins/init.groovy.d/basic-security.groovy
 
 # git, supervisor
 RUN apt-get -y install git-core supervisor
@@ -38,7 +38,7 @@ ENV DOCKER_COMPOSE_VERSION 1.11.2
 RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 RUN chmod +x /usr/local/bin/docker-compose
 
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD src/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 22 8080
 

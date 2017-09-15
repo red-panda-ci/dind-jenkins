@@ -1,0 +1,2 @@
+ansicolor
+cloudbees-bitbucket-branch-source
