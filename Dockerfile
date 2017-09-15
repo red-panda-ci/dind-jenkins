@@ -4,6 +4,7 @@ FROM billyteves/ubuntu-dind
 RUN apt-get -y update
 RUN apt-get install -y unzip
 RUN apt-get install -y  python
+RUN apt-get install -y openjdk-8-jdk-headless
 
 # jenkins
 ENV JENKINS_VERSION 2.60.2
@@ -13,10 +14,12 @@ RUN apt-get -y update
 RUN apt-get -y install jenkins=$JENKINS_VERSION
 
 # Jenkins Plugins
+ENV JENKINS_UC https://updates.jenkins.io
+ENV JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental
 COPY src/install-plugins.sh /usr/local/bin/install-plugins.sh
 COPY src/plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN mkdir -p /root/.jenkins/plugins/
-RUN /usr/local/bin/install-plugins.sh --plugins /usr/share/jenkins/ref/plugins.txt --plugindir /root/.jenkins/plugins
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 # Jenkins avoid 2.x setup wizard but provide secure-by-default
 ENV JENKINS_USER redpanda
