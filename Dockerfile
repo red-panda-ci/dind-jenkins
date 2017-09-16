@@ -27,6 +27,7 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 ENV JENKINS_USER redpanda
 ENV JENKINS_PASS redpanda
 COPY src/jenkins-version /root/.jenkins/jenkins.install.UpgradeWizard.state
+COPY src/jenkins-version /root/.jenkins/jenkins.install.InstallUtil.lastExecVersion
 COPY src/set-user.groovy /root/.jenkins/init.groovy.d/basic-security.groovy
 
 # git, supervisor
