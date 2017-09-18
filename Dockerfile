@@ -46,6 +46,9 @@ RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE
 
 ADD src/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+# Neo theme
+COPY src/org.codefirst.SimpleThemeDecorator.xml /root/.jenkins/org.codefirst.SimpleThemeDecorator.xml
+
 EXPOSE 22 8080
 
 CMD ["/usr/bin/supervisord"]
