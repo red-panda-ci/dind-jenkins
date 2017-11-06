@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "Dummy passing test"
+echo "Volkswagen test"
 exit 0

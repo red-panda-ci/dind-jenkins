@@ -1,44 +1,45 @@
 #!groovy
 
-@Library('github.com/red-panda-ci/jenkins-pipeline-library') _
+@Library('github.com/red-panda-ci/jenkins-pipeline-library@develop') _
 
 // Initialize global config
-cfg = jplConfig('jenkins-dind','backend','', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
+cfg = jplConfig('jenkins-dind', 'backend', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
+def jenkinsVersion = readFile "${env.WORKSPACE}/src/jenkins-version"
 
 pipeline {
-    agent { label 'docker' }
+    agent none
 
     stages {
-        stage ('Build') {
+        stage ('Initialize') {
+            agent { label 'docker' }
             steps  {
-                jplCheckoutSCM(cfg)
+                jplStart(cfg)
+            }
+        }
+        stage ('Build') {
+            agent { label 'docker' }
+            steps {
+                jplDockerPush (cfg, 'redpandaci/jenkins-dind:develop', 'https://registry.hub.docker.com', 'redpandaci-docker-credentials')
             }
         }
         stage ('Test') {
+            agent { label 'docker' }
             steps  {
-                timestamps {
-                    ansiColor('xterm') {
-                        sh 'bin/test.sh'
-                    }
-                }
-            }
-        }
-        stage('Sonarqube Analysis') {
-            steps {
-                //jplSonarScanner(cfg)
-                echo "ToDo: Sonar"
+                sh 'bin/test.sh'
             }
         }
         stage ('Release confirm') {
-            when { branch 'release/*' }
+            when { branch 'release/v*' }
             steps {
                 jplPromoteBuild(cfg)
             }
         }
         stage ('Release finish') {
             agent { label 'docker' }
-            when { branch 'release/*' }
+            when { expression ( cfg.BRANCH_NAME.startsWith('release/v') && cfg.promoteBuild.enabled }
             steps {
+                jplDockerPush (cfg, "redpandaci/jenkins-dind:latest", 'https://registry.hub.docker.com', 'redpandaci-docker-credentials')
+                jplDockerPush (cfg, "redpandaci/jenkins-dind:" + jenkinsVersion, 'https://registry.hub.docker.com', 'redpandaci-docker-credentials')
                 jplCloseRelease(cfg)
             }
         }
@@ -58,6 +59,8 @@ pipeline {
     }
 
     options {
+        timestamps()
+        ansiColor('xterm')
         buildDiscarder(logRotator(artifactNumToKeepStr: '20',artifactDaysToKeepStr: '30'))
         disableConcurrentBuilds()
         skipDefaultCheckout()
