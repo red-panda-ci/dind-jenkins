@@ -36,7 +36,7 @@ pipeline {
         }
         stage ('Release finish') {
             agent { label 'docker' }
-            when { expression ( cfg.BRANCH_NAME.startsWith('release/v') && cfg.promoteBuild.enabled }
+            when { expression ( cfg.BRANCH_NAME.startsWith('release/v') && cfg.promoteBuild.enabled ) }
             steps {
                 jplDockerPush (cfg, "redpandaci/jenkins-dind:latest", 'https://registry.hub.docker.com', 'redpandaci-docker-credentials')
                 jplDockerPush (cfg, "redpandaci/jenkins-dind:" + jenkinsVersion, 'https://registry.hub.docker.com', 'redpandaci-docker-credentials')
