@@ -4,7 +4,6 @@
 
 // Initialize global config
 cfg = jplConfig('jenkins-dind', 'backend', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
-def jenkinsVersion = readFile "${env.WORKSPACE}/src/jenkins-version"
 
 pipeline {
     agent none
@@ -14,6 +13,9 @@ pipeline {
             agent { label 'docker' }
             steps  {
                 jplStart(cfg)
+                script {
+                    def jenkinsVersion = readFile "${env.WORKSPACE}/src/jenkins-version"
+                }
             }
         }
         stage ('Build') {
