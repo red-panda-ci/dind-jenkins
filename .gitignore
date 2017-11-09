@@ -1,0 +1,4 @@
+/test/reports/*
+
+!.gitignore
+!.gitkeep
