@@ -38,10 +38,11 @@ $PLUGINS
 
 * docker
 * docker-compose
-* unzip
-* python
-* make
 * jar
+* jq
+* make
+* python
+* unzip
 EOF
 
 # $ ./bin/readme-template.sh $(cat ./src/jenkins-version) "$(cat ./src/plugins.txt | sed -e 's/^/\* /' )"
