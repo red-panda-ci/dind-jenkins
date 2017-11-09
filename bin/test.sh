@@ -15,7 +15,7 @@ mkdir -p test/reports
 
 # Main
 echo -n "# Start Jenkins as a time-boxed daemon container, running for max ${timeoutSeconds} seconds"
-id=$(docker run --rm -d --privileged -p 8080:8080 redpandaci/jenkins-dind:develop timeout ${timeoutSeconds} java -jar /usr/share/jenkins/jenkins.war)
+id=$(docker run --rm -d --privileged redpandaci/jenkins-dind:develop timeout ${timeoutSeconds} java -jar /usr/share/jenkins/jenkins.war)
 returnValue=$((returnValue + $?))
 echo " with id ${id}"
 
