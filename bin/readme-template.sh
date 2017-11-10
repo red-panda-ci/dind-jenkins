@@ -1,15 +1,15 @@
 #!/bin/bash
 
 JENKINS_VERSION=$1
-PLUGINS="$(cat ./src/plugins.txt | sed -e 's/^/\* /' )"
+PLUGINS="$(cat ./test/reports/plugins-versions.txt)"
 
 cat  << EOF
-# Jenkins-dind 
+# Jenkins-dind
 
-_Jenkins image with docker in docker strategy_
+Jenkins image with docker in docker strategy
 
 _Supported tags and respective \`Dockerfile\` links:_
-[\`latest\`, \`develop\`, \`2.6.2\`](Dockerfile)
+[\`latest\`, \`develop\`, \`${JENKINS_VERSION}\`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png)
 
@@ -38,12 +38,11 @@ $PLUGINS
 
 * docker
 * docker-compose
-* unzip
-* python
-* make
 * jar
-
-
+* jq
+* make
+* python
+* unzip
 EOF
 
 # $ ./bin/readme-template.sh $(cat ./src/jenkins-version) "$(cat ./src/plugins.txt | sed -e 's/^/\* /' )"
