@@ -4,6 +4,7 @@
 
 // Initialize global config
 cfg = jplConfig('jenkins-dind', 'backend', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
+String jenkinsVersion
 
 pipeline {
     agent none
@@ -14,7 +15,7 @@ pipeline {
             steps  {
                 jplStart(cfg)
                 script {
-                    def jenkinsVersion = readFile "${env.WORKSPACE}/src/jenkins-version"
+                    jenkinsVersion = readFile "${env.WORKSPACE}/src/jenkins-version"
                 }
             }
         }
