@@ -10,12 +10,24 @@ function runWithinDocker () {
 # Configuration
 cd $(dirname "$0")/..
 returnValue=0
-timeoutSeconds=300
 mkdir -p test/reports
+if [[ "$1" == "local" ]]
+then
+    timeoutSeconds=0
+    containerPort="-p 8080:8080"
+    if [[ "$2" == "test" ]]
+    then
+        doTests="true"
+    fi
+else
+    doTests="true"
+    timeoutSeconds=300
+    containerPort=''
+fi
 
 # Main
 echo -n "# Start Jenkins as a time-boxed daemon container, running for max ${timeoutSeconds} seconds"
-id=$(docker run --rm -d --privileged redpandaci/jenkins-dind:develop timeout ${timeoutSeconds} java -jar /usr/share/jenkins/jenkins.war)
+id=$(docker run ${containerPort} --rm -d --privileged redpandaci/jenkins-dind:develop timeout ${timeoutSeconds} java -jar /usr/share/jenkins/jenkins.war)
 returnValue=$((returnValue + $?))
 echo " with id ${id}"
 

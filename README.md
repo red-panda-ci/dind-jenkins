@@ -26,33 +26,60 @@ redpandaci/jenkins-dind:latest
 
 ## Plugins
 
-Total number of plugins: 97
+We use the following plugins as the base for installing pluginss
+
+* ansicolor:latest
+* antisamy-markup-formatter:latest
+* bitbucket:latest
+* blueocean:latest
+* build-monitor-plugin:latest
+* cloudbees-bitbucket-branch-source:latest
+* embeddable-build-status:latest
+* file-operations:latest
+* git:latest
+* github-branch-source:latest
+* github-organization-folder:latest
+* github:latest
+* htmlpublisher:latest
+* jira-steps:latest
+* pipeline-utility-steps:latest
+* simple-theme-plugin:latest
+* slack:latest
+* sonar:latest
+* thinBackup:latest
+* timestamper:latest
+* workflow-aggregator:latest
+
+As result of the plugins installation, resolving all dependencies, we get this
+
+Total number of plugins: 98
 
 * ace-editor - 1.1
 * ansicolor - 0.5.2
+* antisamy-markup-formatter - 1.5
 * apache-httpcomponents-client-4-api - 4.5.3-2.0
 * authentication-tokens - 1.3
 * bitbucket - 1.1.6
-* blueocean - 1.3.1
+* blueocean - 1.3.2
 * blueocean-autofavorite - 1.0.0
-* blueocean-bitbucket-pipeline - 1.3.1
-* blueocean-commons - 1.3.1
-* blueocean-config - 1.3.1
-* blueocean-dashboard - 1.3.1
+* blueocean-bitbucket-pipeline - 1.3.2
+* blueocean-commons - 1.3.2
+* blueocean-config - 1.3.2
+* blueocean-dashboard - 1.3.2
 * blueocean-display-url - 2.1.1
-* blueocean-events - 1.3.1
-* blueocean-git-pipeline - 1.3.1
-* blueocean-github-pipeline - 1.3.1
-* blueocean-i18n - 1.3.1
-* blueocean-jira - 1.3.1
-* blueocean-jwt - 1.3.1
-* blueocean-personalization - 1.3.1
-* blueocean-pipeline-api-impl - 1.3.1
-* blueocean-pipeline-editor - 1.3.1
-* blueocean-pipeline-scm-api - 1.3.1
-* blueocean-rest - 1.3.1
-* blueocean-rest-impl - 1.3.1
-* blueocean-web - 1.3.1
+* blueocean-events - 1.3.2
+* blueocean-git-pipeline - 1.3.2
+* blueocean-github-pipeline - 1.3.2
+* blueocean-i18n - 1.3.2
+* blueocean-jira - 1.3.2
+* blueocean-jwt - 1.3.2
+* blueocean-personalization - 1.3.2
+* blueocean-pipeline-api-impl - 1.3.2
+* blueocean-pipeline-editor - 1.3.2
+* blueocean-pipeline-scm-api - 1.3.2
+* blueocean-rest - 1.3.2
+* blueocean-rest-impl - 1.3.2
+* blueocean-web - 1.3.2
 * branch-api - 2.0.15
 * build-monitor-plugin - 1.12+build.201704111018
 * cloudbees-bitbucket-branch-source - 2.2.7
@@ -77,7 +104,7 @@ Total number of plugins: 97
 * htmlpublisher - 1.14
 * jackson2-api - 2.8.7.0
 * jira - 2.5
-* jira-steps - 1.2.4
+* jira-steps - 1.2.5
 * jquery - 1.12.4-0
 * jquery-detached - 1.2.1
 * jsch - 0.1.54.1
@@ -130,7 +157,8 @@ Total number of plugins: 97
 
 * docker
 * docker-compose
-* unzip
-* python
-* make
 * jar
+* jq
+* make
+* python
+* unzip
