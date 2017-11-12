@@ -1,9 +1,10 @@
 #!/bin/bash
 
 JENKINS_VERSION=$1
-PLUGINS="$(cat ./test/reports/plugins-versions.txt)"
+BASE_PLUGINS="$(cat ./src/plugins.txt|sed -e 's/^/\* /')"
+ALL_PLUGINS="$(cat ./test/reports/plugins-versions.txt)"
 
-cat  << EOF
+cat << EOF
 # Jenkins-dind
 
 Jenkins image with docker in docker strategy
@@ -32,7 +33,13 @@ $JENKINS_VERSION
 
 ## Plugins
 
-$PLUGINS
+We use the following plugins as the base for installing pluginss
+
+$BASE_PLUGINS
+
+As result of the plugins installation, resolving all dependencies, we get this
+
+$ALL_PLUGINS
 
 ## Utilities
 
@@ -44,5 +51,3 @@ $PLUGINS
 * python
 * unzip
 EOF
-
-# $ ./bin/readme-template.sh $(cat ./src/jenkins-version) "$(cat ./src/plugins.txt | sed -e 's/^/\* /' )"

@@ -1,4 +1,5 @@
 ansicolor:latest
+antisamy-markup-formatter:latest
 bitbucket:latest
 blueocean:latest
 build-monitor-plugin:latest
