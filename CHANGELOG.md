@@ -1,3 +1,13 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2017-11-12)
+
+
+### Docs
+
+* Update contributing and readme ([195cfdcb6acb8726513c68cb98205fbbaa930e08](https://github.com/red-panda-ci/jenkins-dind/commit/195cfdcb6acb8726513c68cb98205fbbaa930e08))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2017-11-10)
 
@@ -10,6 +20,7 @@
 * Move core files to src folder ([008144c4fc3c3e430b80cee9282d613ad9174e6b](https://github.com/red-panda-ci/jenkins-dind/commit/008144c4fc3c3e430b80cee9282d613ad9174e6b))
 * Move core files to src folder ([d5f6463091620481b3085f512fa5cf2601fe8640](https://github.com/red-panda-ci/jenkins-dind/commit/d5f6463091620481b3085f512fa5cf2601fe8640))
 * Remove 8080 port usage ([e08c2e62cf02f2ccba8b528140c6d815c70583ba](https://github.com/red-panda-ci/jenkins-dind/commit/e08c2e62cf02f2ccba8b528140c6d815c70583ba))
+* Update CHANGELOG.md to v0.1.0 with Red Panda JPL ([8b3e114a033e94d8caeade51528087e1930e7eda](https://github.com/red-panda-ci/jenkins-dind/commit/8b3e114a033e94d8caeade51528087e1930e7eda))
 * Update Development Pipeline ([06382163835d7c78823383775ae9644c2e91cbac](https://github.com/red-panda-ci/jenkins-dind/commit/06382163835d7c78823383775ae9644c2e91cbac))
 * Use dockerTag parameter in docker publish ([921925ee91cecac9707eb11bae206b8d77b2ef24](https://github.com/red-panda-ci/jenkins-dind/commit/921925ee91cecac9707eb11bae206b8d77b2ef24))
 
