@@ -3,7 +3,7 @@
 @Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.1.1') _
 
 // Initialize global config
-cfg = jplConfig('jenkins-dind', 'backend', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
+cfg = jplConfig('jenkins-dind', 'docker', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
 String jenkinsVersion
 
 pipeline {
