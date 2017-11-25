@@ -1,6 +1,21 @@
+<a name="1.0.1"></a>
+## 1.0.1 (2017-11-14)
+
+
+### Build
+
+* Change target type ([9c71fafc0de56eda38da3bb6d2506924bf3a60fb](https://github.com/red-panda-ci/jenkins-dind/commit/9c71fafc0de56eda38da3bb6d2506924bf3a60fb))
+* Update pipeline to jpl v2.1.1 ([4d687a76155df3978a4da1299bb14d2ec1fc037d](https://github.com/red-panda-ci/jenkins-dind/commit/4d687a76155df3978a4da1299bb14d2ec1fc037d))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-11-12)
 
+
+### Build
+
+* Update CHANGELOG.md to v1.0.0 with Red Panda JPL ([728b0f90ec66a2afc45a98dccd625593f3435165](https://github.com/red-panda-ci/jenkins-dind/commit/728b0f90ec66a2afc45a98dccd625593f3435165))
 
 ### Docs
 
