@@ -1,10 +1,21 @@
+<a name="1.2.0"></a>
+# 1.2.0 (2017-12-07)
+
+
+### Upgrade
+
+* Update to Jenkins Release v2.89.1 ([06e2704f0e485f7f44141377e17456639d3f4e2d](https://github.com/red-panda-ci/jenkins-dind/commit/06e2704f0e485f7f44141377e17456639d3f4e2d))
+
+
+
 <a name="1.0.1"></a>
-## 1.0.1 (2017-11-14)
+## 1.0.1 (2017-11-25)
 
 
 ### Build
 
 * Change target type ([9c71fafc0de56eda38da3bb6d2506924bf3a60fb](https://github.com/red-panda-ci/jenkins-dind/commit/9c71fafc0de56eda38da3bb6d2506924bf3a60fb))
+* Update CHANGELOG.md to v1.0.1 with Red Panda JPL ([48f8be8e8f1d82cc63616e3891d542a0acb3ec71](https://github.com/red-panda-ci/jenkins-dind/commit/48f8be8e8f1d82cc63616e3891d542a0acb3ec71))
 * Update pipeline to jpl v2.1.1 ([4d687a76155df3978a4da1299bb14d2ec1fc037d](https://github.com/red-panda-ci/jenkins-dind/commit/4d687a76155df3978a4da1299bb14d2ec1fc037d))
 
 
