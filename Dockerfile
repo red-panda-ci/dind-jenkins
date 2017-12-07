@@ -1,7 +1,7 @@
 FROM billyteves/ubuntu-dind
 
 # Prepare Jenkins package
-ENV JENKINS_VERSION 2.73.3
+ENV JENKINS_VERSION 2.89.1
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - && \
     sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
