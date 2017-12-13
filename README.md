@@ -3,7 +3,7 @@
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective `Dockerfile` links:_
-[`latest`, `develop`, `2.89.1`](Dockerfile)
+[`latest`, `2.89.1`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png)
 
@@ -60,34 +60,34 @@ Total number of plugins: 98
 * apache-httpcomponents-client-4-api - 4.5.3-2.0
 * authentication-tokens - 1.3
 * bitbucket - 1.1.8
-* blueocean - 1.3.4
+* blueocean - 1.3.5
 * blueocean-autofavorite - 1.2.1
-* blueocean-bitbucket-pipeline - 1.3.4
-* blueocean-commons - 1.3.4
-* blueocean-config - 1.3.4
-* blueocean-dashboard - 1.3.4
+* blueocean-bitbucket-pipeline - 1.3.5
+* blueocean-commons - 1.3.5
+* blueocean-config - 1.3.5
+* blueocean-dashboard - 1.3.5
 * blueocean-display-url - 2.2.0
-* blueocean-events - 1.3.4
-* blueocean-git-pipeline - 1.3.4
-* blueocean-github-pipeline - 1.3.4
-* blueocean-i18n - 1.3.4
-* blueocean-jira - 1.3.4
-* blueocean-jwt - 1.3.4
-* blueocean-personalization - 1.3.4
-* blueocean-pipeline-api-impl - 1.3.4
-* blueocean-pipeline-editor - 1.3.4
-* blueocean-pipeline-scm-api - 1.3.4
-* blueocean-rest - 1.3.4
-* blueocean-rest-impl - 1.3.4
-* blueocean-web - 1.3.4
+* blueocean-events - 1.3.5
+* blueocean-git-pipeline - 1.3.5
+* blueocean-github-pipeline - 1.3.5
+* blueocean-i18n - 1.3.5
+* blueocean-jira - 1.3.5
+* blueocean-jwt - 1.3.5
+* blueocean-personalization - 1.3.5
+* blueocean-pipeline-api-impl - 1.3.5
+* blueocean-pipeline-editor - 1.3.5
+* blueocean-pipeline-scm-api - 1.3.5
+* blueocean-rest - 1.3.5
+* blueocean-rest-impl - 1.3.5
+* blueocean-web - 1.3.5
 * branch-api - 2.0.16
-* build-monitor-plugin - 1.12+build.201704111018
+* build-monitor-plugin - 1.12+build.201708172343
 * cloudbees-bitbucket-branch-source - 2.2.7
 * cloudbees-folder - 6.2.1
 * credentials - 2.1.16
 * credentials-binding - 1.13
 * display-url-api - 2.2.0
-* docker-commons - 1.9
+* docker-commons - 1.10
 * docker-workflow - 1.14
 * durable-task - 1.17
 * embeddable-build-status - 1.9
@@ -102,7 +102,7 @@ Total number of plugins: 98
 * github-organization-folder - 1.6
 * handlebars - 1.1.1
 * htmlpublisher - 1.14
-* jackson2-api - 2.8.7.0
+* jackson2-api - 2.8.10.1
 * jira - 2.5
 * jira-steps - 1.3.1
 * jquery - 1.12.4-0
@@ -129,8 +129,8 @@ Total number of plugins: 98
 * pipeline-utility-steps - 1.5.1
 * plain-credentials - 1.4
 * pubsub-light - 1.12
-* scm-api - 2.2.5
-* script-security - 1.36
+* scm-api - 2.2.6
+* script-security - 1.39
 * simple-theme-plugin - 0.3
 * slack - 2.3
 * sonar - 2.6.1
