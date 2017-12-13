@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.2.2') _
+@Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.3.3') _
 
 // Initialize global config
 cfg = jplConfig('jenkins-dind', 'docker', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
@@ -22,13 +22,13 @@ pipeline {
         stage ('Build') {
             agent { label 'docker' }
             steps {
-                jplDockerPush (cfg, "redpandaci/jenkins-dind", "develop", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
+                jplDockerBuild (cfg, "redpandaci/jenkins-dind", "test")
             }
         }
         stage ('Test') {
             agent { label 'docker' }
             steps  {
-                sh 'bin/test.sh'
+                sh 'bin/get-plugins-versions.sh'
             }
         }
         stage ('Release confirm') {
@@ -41,8 +41,10 @@ pipeline {
             agent { label 'docker' }
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') && cfg.promoteBuild.enabled } }
             steps {
-                jplDockerPush (cfg, "redpandaci/jenkins-dind", jenkinsVersion, "https://registry.hub.docker.com", "redpandaci-docker-credentials")
-                jplDockerPush (cfg, "redpandaci/jenkins-dind", "latest", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
+                sh "docker rmi redpandaci/jenkins-dind:test redpandaci/jenkins-dind:${jenkinsVersion} redpandaci/jenkins-dind:latest || true"
+                sh 'make && git add README.md && git commit -m "Docs: Update README.md with Red Panda JPL"'
+                jplDockerPush (cfg, "redpandaci/jenkins-dind", jenkinsVersion, "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
+                jplDockerPush (cfg, "redpandaci/jenkins-dind", "latest", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 jplCloseRelease(cfg)
             }
         }

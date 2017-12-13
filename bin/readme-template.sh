@@ -10,7 +10,7 @@ cat << EOF
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective \`Dockerfile\` links:_
-[\`latest\`, \`develop\`, \`${JENKINS_VERSION}\`](Dockerfile)
+[\`latest\`, \`${JENKINS_VERSION}\`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png)
 
