@@ -1,6 +1,25 @@
+<a name="1.2.1"></a>
+## 1.2.1 (2017-12-13)
+
+
+### Build
+
+* Manage docker build correctly ([4f0da81d6d2416b6cc23d32e61e7b770df299e9d](https://github.com/red-panda-ci/jenkins-dind/commit/4f0da81d6d2416b6cc23d32e61e7b770df299e9d))
+* Use jpl v2.3.3 ([323a0af94e7d90fbb7c4171c9d9ad5fb840aa652](https://github.com/red-panda-ci/jenkins-dind/commit/323a0af94e7d90fbb7c4171c9d9ad5fb840aa652))
+
+### Docs
+
+* Update README.md with Red Panda JPL ([17b26caaa951c9c6d0d980ee0136abbe867a0d15](https://github.com/red-panda-ci/jenkins-dind/commit/17b26caaa951c9c6d0d980ee0136abbe867a0d15))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2017-12-07)
 
+
+### Build
+
+* Update CHANGELOG.md to v1.2.0 with Red Panda JPL ([c22424e375f7c0fff16959ada1177359e717b8ea](https://github.com/red-panda-ci/jenkins-dind/commit/c22424e375f7c0fff16959ada1177359e717b8ea))
 
 ### Upgrade
 

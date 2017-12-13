@@ -41,8 +41,8 @@ pipeline {
             agent { label 'docker' }
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') && cfg.promoteBuild.enabled } }
             steps {
-                sh "docker rmi redpandaci/jenkins-dind:test redpandaci/jenkins-dind:${jenkinsVersion} redpandaci/jenkins-dind:latest || true"
                 sh 'make && git add README.md && git commit -m "Docs: Update README.md with Red Panda JPL"'
+                sh "docker rmi redpandaci/jenkins-dind:test redpandaci/jenkins-dind:${jenkinsVersion} redpandaci/jenkins-dind:latest || true"
                 jplDockerPush (cfg, "redpandaci/jenkins-dind", jenkinsVersion, "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 jplDockerPush (cfg, "redpandaci/jenkins-dind", "latest", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 jplCloseRelease(cfg)
