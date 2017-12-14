@@ -3,7 +3,7 @@
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective `Dockerfile` links:_
-[`latest`, `2.89.1`](Dockerfile)
+[`latest`, `2.89.2`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png)
 
@@ -22,7 +22,7 @@ redpandaci/jenkins-dind:latest
 
 ## Jenkins version
 
-2.89.1
+2.89.2
 
 ## Plugins
 
