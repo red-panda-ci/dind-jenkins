@@ -23,7 +23,7 @@ pipeline {
             agent { label 'docker' }
             steps {
                 script {
-                    docker.build('redpandaci/jenkins-dind:test', '--no-cache')
+                    docker.build('redpandaci/jenkins-dind:test', '--no-cache .')
                     docker.build('redpandaci/jenkins-dind:latest')
                 }
             }
