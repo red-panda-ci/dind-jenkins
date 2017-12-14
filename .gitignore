@@ -2,3 +2,5 @@
 
 !.gitignore
 !.gitkeep
+
+ci-scripts/.temp
