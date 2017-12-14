@@ -1,3 +1,25 @@
+<a name="1.2.2"></a>
+## 1.2.2 (2017-12-14)
+
+
+### Build
+
+* Delete docker image after test ([27cd4fb6eed778c2ea023f65a5dd8c0b3b30f0d1](https://github.com/red-panda-ci/jenkins-dind/commit/27cd4fb6eed778c2ea023f65a5dd8c0b3b30f0d1))
+* Fix bin/test.sh ([e722a7c9f5be5b56b110a52fefa8ac566ade516f](https://github.com/red-panda-ci/jenkins-dind/commit/e722a7c9f5be5b56b110a52fefa8ac566ade516f))
+* Fix docker build typo ([cbe540df3a57b3455da42fd1d65e73b606dd967a](https://github.com/red-panda-ci/jenkins-dind/commit/cbe540df3a57b3455da42fd1d65e73b606dd967a))
+* Fix post action typo ([083f2abef280979cee3789f28a978f0d0d26e1b4](https://github.com/red-panda-ci/jenkins-dind/commit/083f2abef280979cee3789f28a978f0d0d26e1b4))
+* Make the docker image build inside script block ([5ac92d184ce17ce71587ee2aa5102a5f55f0005d](https://github.com/red-panda-ci/jenkins-dind/commit/5ac92d184ce17ce71587ee2aa5102a5f55f0005d))
+
+### Docs
+
+* Update README.md with Red Panda JPL ([e41874dd02fe9e7bb668361a109e2c2f03870551](https://github.com/red-panda-ci/jenkins-dind/commit/e41874dd02fe9e7bb668361a109e2c2f03870551))
+
+### Update
+
+* Add jpl test  ([1bde52a4ecdc61760cbd440d4c6db66fa213a2da](https://github.com/red-panda-ci/jenkins-dind/commit/1bde52a4ecdc61760cbd440d4c6db66fa213a2da))
+
+
+
 <a name="1.2.1"></a>
 ## 1.2.1 (2017-12-13)
 
@@ -5,6 +27,7 @@
 ### Build
 
 * Manage docker build correctly ([4f0da81d6d2416b6cc23d32e61e7b770df299e9d](https://github.com/red-panda-ci/jenkins-dind/commit/4f0da81d6d2416b6cc23d32e61e7b770df299e9d))
+* Update CHANGELOG.md to v1.2.1 with Red Panda JPL ([fe0eed0f24b63aaea2ac218fc73d72dab94bb6fb](https://github.com/red-panda-ci/jenkins-dind/commit/fe0eed0f24b63aaea2ac218fc73d72dab94bb6fb))
 * Use jpl v2.3.3 ([323a0af94e7d90fbb7c4171c9d9ad5fb840aa652](https://github.com/red-panda-ci/jenkins-dind/commit/323a0af94e7d90fbb7c4171c9d9ad5fb840aa652))
 
 ### Docs
