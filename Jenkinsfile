@@ -28,7 +28,9 @@ pipeline {
                 }
             }
             post {
-                sh 'docker rmi redpandaci/jenkins-dind:latest'
+                always {
+                    sh 'docker rmi redpandaci/jenkins-dind:latest'
+                }
             }
         }
         stage ('Test') {
