@@ -1,6 +1,11 @@
 /test/reports/*
 
+ci-scripts/.temp
+
+# Linux
+*~
+.*~
+
+# git
 !.gitignore
 !.gitkeep
-
-ci-scripts/.temp
