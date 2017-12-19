@@ -82,7 +82,7 @@ Total number of plugins: 98
 * blueocean-web - 1.3.5
 * branch-api - 2.0.16
 * build-monitor-plugin - 1.12+build.201708172343
-* cloudbees-bitbucket-branch-source - 2.2.7
+* cloudbees-bitbucket-branch-source - 2.2.8
 * cloudbees-folder - 6.2.1
 * credentials - 2.1.16
 * credentials-binding - 1.13
@@ -94,11 +94,11 @@ Total number of plugins: 98
 * favorite - 2.3.1
 * file-operations - 1.7
 * git - 3.6.4
-* git-client - 2.6.0
+* git-client - 2.7.0
 * git-server - 1.7
 * github - 1.28.1
 * github-api - 1.90
-* github-branch-source - 2.3.1
+* github-branch-source - 2.3.2
 * github-organization-folder - 1.6
 * handlebars - 1.1.1
 * htmlpublisher - 1.14
@@ -138,7 +138,7 @@ Total number of plugins: 98
 * ssh-credentials - 1.13
 * structs - 1.10
 * thinBackup - 1.9
-* timestamper - 1.8.8
+* timestamper - 1.8.9
 * token-macro - 2.3
 * variant - 1.1
 * workflow-aggregator - 2.5
