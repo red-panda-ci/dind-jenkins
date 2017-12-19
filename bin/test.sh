@@ -8,4 +8,5 @@ rm -rf ${TEST_FOLDER}
 mkdir -p ${TEST_FOLDER}
 cd ${TEST_FOLDER}
 git clone https://github.com/red-panda-ci/jenkins-pipeline-library -b master .
-bin/test.sh
+bin/test.sh $@
+

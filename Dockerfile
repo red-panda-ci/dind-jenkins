@@ -1,7 +1,7 @@
-FROM billyteves/ubuntu-dind
+FROM redpandaci/ubuntu-dind
 
 # Prepare Jenkins package
-ENV JENKINS_VERSION 2.89.1
+ENV JENKINS_VERSION 2.89.2
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - && \
     sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
@@ -29,16 +29,9 @@ COPY src/jenkins-version /root/.jenkins/jenkins.install.UpgradeWizard.state
 COPY src/jenkins-version /root/.jenkins/jenkins.install.InstallUtil.lastExecVersion
 COPY src/set-user.groovy /root/.jenkins/init.groovy.d/basic-security.groovy
 
-# Docker Compose
-ENV DOCKER_COMPOSE_VERSION 1.11.2
-RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
-    chmod +x /usr/local/bin/docker-compose
-
 # Neo theme
 COPY src/org.codefirst.SimpleThemeDecorator.xml /root/.jenkins/org.codefirst.SimpleThemeDecorator.xml
 
 EXPOSE 8080
-
-ENTRYPOINT ["wrapdocker"]
 
 CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
