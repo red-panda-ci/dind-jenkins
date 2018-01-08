@@ -27,11 +27,6 @@ pipeline {
                     docker.build('redpandaci/jenkins-dind:latest')
                 }
             }
-            post {
-                always {
-                    sh 'docker rmi redpandaci/jenkins-dind:test'
-                }
-            }
         }
         stage ('Test') {
             agent { label 'docker' }
@@ -40,7 +35,7 @@ pipeline {
             }
             post {
                 always {
-                    sh 'docker rmi redpandaci/jenkins-dind:latest && docker pull redpandaci/jenkins-dind:latest'
+                    sh 'docker rmi redpandaci/jenkins-dind:latest'
                 }
             }
         }
