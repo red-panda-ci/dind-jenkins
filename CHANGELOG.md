@@ -1,9 +1,27 @@
+<a name="1.2.4"></a>
+## 1.2.4 (2018-01-08)
+
+
+### Build
+
+* Fix push update condition  ([48c25653281b60131987a86335ec66d2f9a2dbfc](https://github.com/red-panda-ci/jenkins-dind/commit/48c25653281b60131987a86335ec66d2f9a2dbfc))
+* Fix README.md push condition ([af5d2631444235c6c84c61b4b8583fa8b18b54af](https://github.com/red-panda-ci/jenkins-dind/commit/af5d2631444235c6c84c61b4b8583fa8b18b54af))
+* Set the right docker image removal ([fe8aadfaff6ae52c926ce2bb1cae5094caaded5c](https://github.com/red-panda-ci/jenkins-dind/commit/fe8aadfaff6ae52c926ce2bb1cae5094caaded5c))
+* Use latest tag on testing ([9fdc38eec291184c7cdcf6d1a838affdf7d584d4](https://github.com/red-panda-ci/jenkins-dind/commit/9fdc38eec291184c7cdcf6d1a838affdf7d584d4))
+
+### Update
+
+* Update to latest plugin versions ([e5d84a3c372e34403bc5a46ad188ce7c3fa79f3c](https://github.com/red-panda-ci/jenkins-dind/commit/e5d84a3c372e34403bc5a46ad188ce7c3fa79f3c))
+
+
+
 <a name="1.2.3"></a>
 ## 1.2.3 (2017-12-19)
 
 
 ### Build
 
+* Update CHANGELOG.md to v1.2.3 with Red Panda JPL ([815cac802f4ec0dc895781ff2ff5874bd074f6ae](https://github.com/red-panda-ci/jenkins-dind/commit/815cac802f4ec0dc895781ff2ff5874bd074f6ae))
 * Update Dockerfile with redpandaci/ubuntu-dind image ([2efb9d6c9fa6144243867099c2721cb7bca8f93c](https://github.com/red-panda-ci/jenkins-dind/commit/2efb9d6c9fa6144243867099c2721cb7bca8f93c))
 
 ### Docs
