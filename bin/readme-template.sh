@@ -33,7 +33,7 @@ $JENKINS_VERSION
 
 ## Plugins
 
-We use the following plugins as the base for installing pluginss
+We use the following plugins as the base for installing plugins
 
 $BASE_PLUGINS
 
@@ -45,6 +45,7 @@ $ALL_PLUGINS
 
 * docker
 * docker-compose
+* rancher-compose
 * jar
 * jq
 * make

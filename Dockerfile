@@ -15,12 +15,12 @@ RUN apt-get -y update && \
 
 # Rancher compose
 ENV RANCHER_COMPOSE_VERSION 0.12.5
-RUN wget https://github.com/rancher/rancher-compose/releases/download/v$RANCHER_COMPOSE_VERSION/rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz
-RUN tar zxf rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz
-RUN mv rancher-compose-v$RANCHER_COMPOSE_VERSION/rancher-compose /usr/local/bin/rancher-compose
-RUN chmod +x /usr/local/bin/rancher-compose
-RUN rm rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz
-RUN rm -r rancher-compose-v$RANCHER_COMPOSE_VERSION
+RUN wget https://github.com/rancher/rancher-compose/releases/download/v$RANCHER_COMPOSE_VERSION/rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz && \
+    tar zxf rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz && \
+    mv rancher-compose-v$RANCHER_COMPOSE_VERSION/rancher-compose /usr/local/bin/rancher-compose && \
+    chmod +x /usr/local/bin/rancher-compose && \
+    rm rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz && \
+    rm -r rancher-compose-v$RANCHER_COMPOSE_VERSION 
 
 # Jenkins Plugins
 ENV JENKINS_UC=https://updates.jenkins.io \

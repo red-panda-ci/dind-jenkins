@@ -5,7 +5,7 @@ Jenkins image with docker in docker strategy
 _Supported tags and respective `Dockerfile` links:_
 [`latest`, `2.89.2`](Dockerfile)
 
-![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png)
+![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png) [![Join the chat at https://gitter.im/red-panda-ci/jenkins-dind](https://badges.gitter.im/red-panda-ci/jenkins-dind.svg)](https://gitter.im/red-panda-ci/jenkins-dind?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Usage
 
@@ -26,8 +26,9 @@ redpandaci/jenkins-dind:latest
 
 ## Plugins
 
-We use the following plugins as the base for installing pluginss
+We use the following plugins as the base for installing plugins
 
+* mask-passwords:latest
 * ansicolor:latest
 * antisamy-markup-formatter:latest
 * bitbucket:latest
@@ -52,7 +53,7 @@ We use the following plugins as the base for installing pluginss
 
 As result of the plugins installation, resolving all dependencies, we get this
 
-Total number of plugins: 98
+Total number of plugins: 99
 
 * ace-editor - 1.1
 * ansicolor - 0.5.2
@@ -80,7 +81,7 @@ Total number of plugins: 98
 * blueocean-rest - 1.3.5
 * blueocean-rest-impl - 1.3.5
 * blueocean-web - 1.3.5
-* branch-api - 2.0.17
+* branch-api - 2.0.18
 * build-monitor-plugin - 1.12+build.201708172343
 * cloudbees-bitbucket-branch-source - 2.2.8
 * cloudbees-folder - 6.3
@@ -110,6 +111,7 @@ Total number of plugins: 98
 * jsch - 0.1.54.1
 * junit - 1.23
 * mailer - 1.20
+* mask-passwords - 2.10.1
 * matrix-project - 1.12
 * mercurial - 2.2
 * momentjs - 1.1.1
@@ -118,19 +120,19 @@ Total number of plugins: 98
 * pipeline-graph-analysis - 1.6
 * pipeline-input-step - 2.8
 * pipeline-milestone-step - 1.3.1
-* pipeline-model-api - 1.2.5
+* pipeline-model-api - 1.2.6
 * pipeline-model-declarative-agent - 1.1.1
-* pipeline-model-definition - 1.2.5
-* pipeline-model-extensions - 1.2.5
+* pipeline-model-definition - 1.2.6
+* pipeline-model-extensions - 1.2.6
 * pipeline-rest-api - 2.9
 * pipeline-stage-step - 2.3
-* pipeline-stage-tags-metadata - 1.2.5
+* pipeline-stage-tags-metadata - 1.2.6
 * pipeline-stage-view - 2.9
 * pipeline-utility-steps - 1.5.1
 * plain-credentials - 1.4
 * pubsub-light - 1.12
 * scm-api - 2.2.6
-* script-security - 1.39
+* script-security - 1.40
 * simple-theme-plugin - 0.3
 * slack - 2.3
 * sonar - 2.6.1
@@ -157,6 +159,7 @@ Total number of plugins: 98
 
 * docker
 * docker-compose
+* rancher-compose
 * jar
 * jq
 * make
