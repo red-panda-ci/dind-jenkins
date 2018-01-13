@@ -1,3 +1,4 @@
+mask-passwords:latest
 ansicolor:latest
 antisamy-markup-formatter:latest
 bitbucket:latest

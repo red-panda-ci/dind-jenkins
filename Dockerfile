@@ -13,6 +13,15 @@ RUN apt-get -y update && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Rancher compose
+ENV RANCHER_COMPOSE_VERSION 0.12.5
+RUN wget https://github.com/rancher/rancher-compose/releases/download/v$RANCHER_COMPOSE_VERSION/rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz
+RUN tar zxf rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz
+RUN mv rancher-compose-v$RANCHER_COMPOSE_VERSION/rancher-compose /usr/local/bin/rancher-compose
+RUN chmod +x /usr/local/bin/rancher-compose
+RUN rm rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz
+RUN rm -r rancher-compose-v$RANCHER_COMPOSE_VERSION
+
 # Jenkins Plugins
 ENV JENKINS_UC=https://updates.jenkins.io \
     JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental
