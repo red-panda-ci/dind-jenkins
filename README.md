@@ -1,5 +1,7 @@
 # Jenkins-dind
 
+[![Join the chat at https://gitter.im/red-panda-ci/jenkins-dind](https://badges.gitter.im/red-panda-ci/jenkins-dind.svg)](https://gitter.im/red-panda-ci/jenkins-dind?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective `Dockerfile` links:_
