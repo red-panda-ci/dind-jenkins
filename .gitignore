@@ -9,3 +9,4 @@ ci-scripts/.temp
 # git
 !.gitignore
 !.gitkeep
+node_modules
