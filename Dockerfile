@@ -7,7 +7,7 @@ RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key a
 
 # Package management
 RUN apt-get -y update && \
-    apt-get -y install unzip python openjdk-8-jdk-headless build-essential git-core jq && \
+    apt-get -y install unzip python openjdk-8-jdk-headless build-essential git-core jq libssl-dev && \
     apt-get -y install jenkins=$JENKINS_VERSION && \
     apt-get clean && \
     apt-get autoclean && \
@@ -20,7 +20,17 @@ RUN wget https://github.com/rancher/rancher-compose/releases/download/v$RANCHER_
     mv rancher-compose-v$RANCHER_COMPOSE_VERSION/rancher-compose /usr/local/bin/rancher-compose && \
     chmod +x /usr/local/bin/rancher-compose && \
     rm rancher-compose-linux-amd64-v$RANCHER_COMPOSE_VERSION.tar.gz && \
-    rm -r rancher-compose-v$RANCHER_COMPOSE_VERSION 
+    rm -r rancher-compose-v$RANCHER_COMPOSE_VERSION
+
+# nvm and nodejs
+ENV NODE_VERSION 8.9.4
+ENV NVM_VERSION 0.33.8 
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . $HOME/.nvm/nvm.sh && \
+    nvm install $NODE_VERSION && \
+    nvm alias default $NODE_VERSION && \
+    nvm use default
 
 # Jenkins Plugins
 ENV JENKINS_UC=https://updates.jenkins.io \

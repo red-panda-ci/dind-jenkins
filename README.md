@@ -3,7 +3,7 @@
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective `Dockerfile` links:_
-[`latest`, `2.89.2`](Dockerfile)
+[`latest`, `2.89.2`, `2.89.2-rc-nvm`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png) [![Join the chat at https://gitter.im/red-panda-ci/jenkins-dind](https://badges.gitter.im/red-panda-ci/jenkins-dind.svg)](https://gitter.im/red-panda-ci/jenkins-dind?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -160,6 +160,8 @@ Total number of plugins: 99
 * docker
 * docker-compose
 * rancher-compose
+* nvm
+* node
 * jar
 * jq
 * make

@@ -46,6 +46,8 @@ $ALL_PLUGINS
 * docker
 * docker-compose
 * rancher-compose
+* nvm
+* node
 * jar
 * jq
 * make
