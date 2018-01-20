@@ -3,7 +3,7 @@
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective `Dockerfile` links:_
-[`latest`, `2.89.2`, `2.89.2-rc-nvm`](Dockerfile)
+[`latest`, `2.89.3`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png) [![Join the chat at https://gitter.im/red-panda-ci/jenkins-dind](https://badges.gitter.im/red-panda-ci/jenkins-dind.svg)](https://gitter.im/red-panda-ci/jenkins-dind?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -22,7 +22,7 @@ redpandaci/jenkins-dind:latest
 
 ## Jenkins version
 
-2.89.2
+2.89.3
 
 ## Plugins
 
@@ -53,7 +53,7 @@ We use the following plugins as the base for installing plugins
 
 As result of the plugins installation, resolving all dependencies, we get this
 
-Total number of plugins: 99
+Total number of plugins: 101
 
 * ace-editor - 1.1
 * ansicolor - 0.5.2
@@ -61,32 +61,33 @@ Total number of plugins: 99
 * apache-httpcomponents-client-4-api - 4.5.3-2.0
 * authentication-tokens - 1.3
 * bitbucket - 1.1.8
-* blueocean - 1.3.5
+* blueocean - 1.4.0
 * blueocean-autofavorite - 1.2.1
-* blueocean-bitbucket-pipeline - 1.3.5
-* blueocean-commons - 1.3.5
-* blueocean-config - 1.3.5
-* blueocean-dashboard - 1.3.5
+* blueocean-bitbucket-pipeline - 1.4.0
+* blueocean-commons - 1.4.0
+* blueocean-config - 1.4.0
+* blueocean-core-js - 1.4.0
+* blueocean-dashboard - 1.4.0
 * blueocean-display-url - 2.2.0
-* blueocean-events - 1.3.5
-* blueocean-git-pipeline - 1.3.5
-* blueocean-github-pipeline - 1.3.5
-* blueocean-i18n - 1.3.5
-* blueocean-jira - 1.3.5
-* blueocean-jwt - 1.3.5
-* blueocean-personalization - 1.3.5
-* blueocean-pipeline-api-impl - 1.3.5
-* blueocean-pipeline-editor - 1.3.5
-* blueocean-pipeline-scm-api - 1.3.5
-* blueocean-rest - 1.3.5
-* blueocean-rest-impl - 1.3.5
-* blueocean-web - 1.3.5
+* blueocean-events - 1.4.0
+* blueocean-git-pipeline - 1.4.0
+* blueocean-github-pipeline - 1.4.0
+* blueocean-i18n - 1.4.0
+* blueocean-jira - 1.4.0
+* blueocean-jwt - 1.4.0
+* blueocean-personalization - 1.4.0
+* blueocean-pipeline-api-impl - 1.4.0
+* blueocean-pipeline-editor - 1.4.0
+* blueocean-pipeline-scm-api - 1.4.0
+* blueocean-rest - 1.4.0
+* blueocean-rest-impl - 1.4.0
+* blueocean-web - 1.4.0
 * branch-api - 2.0.18
 * build-monitor-plugin - 1.12+build.201708172343
 * cloudbees-bitbucket-branch-source - 2.2.8
 * cloudbees-folder - 6.3
 * credentials - 2.1.16
-* credentials-binding - 1.13
+* credentials-binding - 1.14
 * display-url-api - 2.2.0
 * docker-commons - 1.11
 * docker-workflow - 1.14
@@ -97,13 +98,14 @@ Total number of plugins: 99
 * git - 3.7.0
 * git-client - 2.7.0
 * git-server - 1.7
-* github - 1.28.1
+* github - 1.29.0
 * github-api - 1.90
 * github-branch-source - 2.3.2
 * github-organization-folder - 1.6
 * handlebars - 1.1.1
 * htmlpublisher - 1.14
 * jackson2-api - 2.8.10.1
+* jenkins-design-language - 1.4.0
 * jira - 2.5
 * jira-steps - 1.3.1
 * jquery - 1.12.4-0
