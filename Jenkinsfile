@@ -1,9 +1,9 @@
 #!groovy
 
-@Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.3.3') _
+@Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.6.0') _
 
 // Initialize global config
-cfg = jplConfig('jenkins-dind', 'docker', '', [hipchat: '', slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
+cfg = jplConfig('jenkins-dind', 'docker', '', [slack: '#integrations', email:'redpandaci+jenkinsdind@gmail.com'])
 String jenkinsVersion
 
 pipeline {

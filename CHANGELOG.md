@@ -1,3 +1,32 @@
+<a name="1.2.5"></a>
+## 1.2.5 (2018-01-20)
+
+
+### Build
+
+* Adds commit validation and Dockerfile linter ([667c805873b5035273fb1c1b6a928209c19734e5](https://github.com/red-panda-ci/jenkins-dind/commit/667c805873b5035273fb1c1b6a928209c19734e5))
+* Update to jpl v2.5.0 and add gitter badge ([49004e07d33bb1cc34c67bd197df2bcf728d8a54](https://github.com/red-panda-ci/jenkins-dind/commit/49004e07d33bb1cc34c67bd197df2bcf728d8a54))
+
+### Docs
+
+* Update README.md with Red Panda JPL ([a42082fe0b6eb62360c1c2b4e85abc5e7a2f5bb1](https://github.com/red-panda-ci/jenkins-dind/commit/a42082fe0b6eb62360c1c2b4e85abc5e7a2f5bb1))
+
+### New
+
+* Adds nvm and node ([43ed29c50c26fdb56fd7cd308426022f8d25f21a](https://github.com/red-panda-ci/jenkins-dind/commit/43ed29c50c26fdb56fd7cd308426022f8d25f21a))
+* Adds rancher-compose cli and mask-password plugin  ([2b9dae1791639f0e821a0e18342947a5e9d5f236](https://github.com/red-panda-ci/jenkins-dind/commit/2b9dae1791639f0e821a0e18342947a5e9d5f236))
+
+### Update
+
+* Adds dockerfile optimaization ([b2c47feb3167f8a95f29c2492224ce1b92eb6445](https://github.com/red-panda-ci/jenkins-dind/commit/b2c47feb3167f8a95f29c2492224ce1b92eb6445))
+* Update base image to ubuntu-dind:1.0.0 ([ba5b182bc4f426c5913fe5eedfeebf8968950ba9](https://github.com/red-panda-ci/jenkins-dind/commit/ba5b182bc4f426c5913fe5eedfeebf8968950ba9))
+
+### Upgrade
+
+* Update to Jenkins Release v2.89.3 ([ffa0e181eef55416e9449024ca862eef29d8a68e](https://github.com/red-panda-ci/jenkins-dind/commit/ffa0e181eef55416e9449024ca862eef29d8a68e))
+
+
+
 <a name="1.2.4"></a>
 ## 1.2.4 (2018-01-08)
 
@@ -7,6 +36,7 @@
 * Fix push update condition  ([48c25653281b60131987a86335ec66d2f9a2dbfc](https://github.com/red-panda-ci/jenkins-dind/commit/48c25653281b60131987a86335ec66d2f9a2dbfc))
 * Fix README.md push condition ([af5d2631444235c6c84c61b4b8583fa8b18b54af](https://github.com/red-panda-ci/jenkins-dind/commit/af5d2631444235c6c84c61b4b8583fa8b18b54af))
 * Set the right docker image removal ([fe8aadfaff6ae52c926ce2bb1cae5094caaded5c](https://github.com/red-panda-ci/jenkins-dind/commit/fe8aadfaff6ae52c926ce2bb1cae5094caaded5c))
+* Update CHANGELOG.md to v1.2.4 with Red Panda JPL ([eb0ec0b749abf979549ebdd3da22114257fc92cd](https://github.com/red-panda-ci/jenkins-dind/commit/eb0ec0b749abf979549ebdd3da22114257fc92cd))
 * Use latest tag on testing ([9fdc38eec291184c7cdcf6d1a838affdf7d584d4](https://github.com/red-panda-ci/jenkins-dind/commit/9fdc38eec291184c7cdcf6d1a838affdf7d584d4))
 
 ### Update

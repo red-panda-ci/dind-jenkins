@@ -1,13 +1,13 @@
-FROM redpandaci/ubuntu-dind
+FROM redpandaci/ubuntu-dind:1.0.0
 
 # Prepare Jenkins package
-ENV JENKINS_VERSION 2.89.2
+ENV JENKINS_VERSION 2.89.3
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - && \
     sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
 # Package management
 RUN apt-get -y update && \
-    apt-get -y install unzip python openjdk-8-jdk-headless build-essential git-core jq && \
+    apt-get -y install unzip python openjdk-8-jdk-headless build-essential git-core jq libssl-dev && \
     apt-get -y install jenkins=$JENKINS_VERSION && \
     apt-get clean && \
     apt-get autoclean && \

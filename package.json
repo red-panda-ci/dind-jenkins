@@ -1,0 +1,38 @@
+{
+  "name": "jenkins-dind",
+  "version": "1.2.4",
+  "description": "Jenkins image with docker in docker strategy",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "commitmsg": "validate-commit-msg -p eslint",
+    "lint": "dockerlint Dockerfile",
+    "pretest": "npm run lint",
+    "precommit": "npm run lint",
+    "test": "bin/test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-panda-ci/jenkins-dind.git"
+  },
+  "keywords": [
+    "jenkins",
+    "dind",
+    "pipeline"
+  ],
+  "author": "Maurice Domínguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/red-panda-ci/jenkins-dind/issues"
+  },
+  "homepage": "https://github.com/red-panda-ci/jenkins-dind#readme",
+  "devDependencies": {
+    "conventional-changelog-cli": "^1.3.5",
+    "dockerlint": "^0.3.7",
+    "husky": "^0.14.3",
+    "validate-commit": "^3.4.0"
+  }
+}

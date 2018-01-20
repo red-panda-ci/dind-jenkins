@@ -2,9 +2,11 @@ version: '2'
 services:
 
   jenkins-dind:
-    image:  "redpandaci/jenkins-dind:lastest"
+    image: redpandaci/jenkins-dind:2.89.2
+    privileged: true
+    tty: true
     ports:
-      - "8081:8080"
+      - 8081:8080
     environment: 
       - JENKINS_USER=CHANGE
       - JENKINS_PASS=CHANGE

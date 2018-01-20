@@ -3,6 +3,7 @@
 TAG=$1
 docker run \
 --privileged \
+--rm \
 --name jenkins \
 -e JENKINS_USER=redpanda \
 -e JENKINS_PASS=redpanda \
