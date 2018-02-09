@@ -1,3 +1,13 @@
+<a name="1.2.6"></a>
+## 1.2.6 (2018-02-09)
+
+
+### Build
+
+* Update to ubuntu dind latest ([2389a81988fdaa17dc1ba1147aa39069832d01de](https://github.com/red-panda-ci/jenkins-dind/commit/2389a81988fdaa17dc1ba1147aa39069832d01de))
+
+
+
 <a name="1.2.5"></a>
 ## 1.2.5 (2018-01-20)
 
@@ -5,6 +15,7 @@
 ### Build
 
 * Adds commit validation and Dockerfile linter ([667c805873b5035273fb1c1b6a928209c19734e5](https://github.com/red-panda-ci/jenkins-dind/commit/667c805873b5035273fb1c1b6a928209c19734e5))
+* Update CHANGELOG.md to v1.2.5 with Red Panda JPL ([a74b4c43a2fc97b6426ba30af4763efc680ba91d](https://github.com/red-panda-ci/jenkins-dind/commit/a74b4c43a2fc97b6426ba30af4763efc680ba91d))
 * Update to jpl v2.5.0 and add gitter badge ([49004e07d33bb1cc34c67bd197df2bcf728d8a54](https://github.com/red-panda-ci/jenkins-dind/commit/49004e07d33bb1cc34c67bd197df2bcf728d8a54))
 
 ### Docs
