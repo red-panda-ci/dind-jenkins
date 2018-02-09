@@ -1,4 +1,4 @@
-FROM redpandaci/ubuntu-dind:1.0.0
+FROM redpandaci/ubuntu-dind:latest
 
 # Prepare Jenkins package
 ENV JENKINS_VERSION 2.89.3
