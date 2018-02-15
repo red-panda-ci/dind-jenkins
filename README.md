@@ -3,7 +3,7 @@
 Jenkins image with docker in docker strategy
 
 _Supported tags and respective `Dockerfile` links:_
-[`latest`, `2.89.3`](Dockerfile)
+[`latest`, `2.89.4`](Dockerfile)
 
 ![Jenkins-dind](https://raw.githubusercontent.com/red-panda-ci/jenkins-dind/master/logo.png) [![Join the chat at https://gitter.im/red-panda-ci/jenkins-dind](https://badges.gitter.im/red-panda-ci/jenkins-dind.svg)](https://gitter.im/red-panda-ci/jenkins-dind?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -22,7 +22,7 @@ redpandaci/jenkins-dind:latest
 
 ## Jenkins version
 
-2.89.3
+2.89.4
 
 ## Plugins
 
@@ -90,7 +90,7 @@ Total number of plugins: 102
 * credentials-binding - 1.15
 * display-url-api - 2.2.0
 * docker-commons - 1.11
-* docker-workflow - 1.15
+* docker-workflow - 1.15.1
 * durable-task - 1.17
 * embeddable-build-status - 1.9
 * favorite - 2.3.1
@@ -105,7 +105,7 @@ Total number of plugins: 102
 * handlebars - 1.1.1
 * handy-uri-templates-2-api - 2.1.6-1.0
 * htmlpublisher - 1.14
-* jackson2-api - 2.8.10.1
+* jackson2-api - 2.8.11.1
 * jenkins-design-language - 1.4.1
 * jira - 2.5
 * jira-steps - 1.3.1
@@ -131,17 +131,17 @@ Total number of plugins: 102
 * pipeline-stage-step - 2.3
 * pipeline-stage-tags-metadata - 1.2.7
 * pipeline-stage-view - 2.9
-* pipeline-utility-steps - 1.5.1
+* pipeline-utility-steps - 2.0
 * plain-credentials - 1.4
 * pubsub-light - 1.12
 * scm-api - 2.2.6
 * script-security - 1.41
-* simple-theme-plugin - 0.3
+* simple-theme-plugin - 0.4
 * slack - 2.3
 * sonar - 2.6.1
 * sse-gateway - 1.15
 * ssh-credentials - 1.13
-* structs - 1.13
+* structs - 1.14
 * thinBackup - 1.9
 * timestamper - 1.8.9
 * token-macro - 2.3
@@ -149,7 +149,7 @@ Total number of plugins: 102
 * workflow-aggregator - 2.5
 * workflow-api - 2.25
 * workflow-basic-steps - 2.6
-* workflow-cps - 2.44
+* workflow-cps - 2.45
 * workflow-cps-global-lib - 2.9
 * workflow-durable-task-step - 2.18
 * workflow-job - 2.17
