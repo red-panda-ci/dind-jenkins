@@ -1,7 +1,7 @@
 FROM redpandaci/ubuntu-dind:latest
 
 # Prepare Jenkins package
-ENV JENKINS_VERSION 2.89.4
+ENV JENKINS_VERSION 2.107.1
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - && \
     sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
