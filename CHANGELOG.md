@@ -1,6 +1,28 @@
+<a name="2.121.2"></a>
+## 2.121.2 (2018-08-01)
+
+
+### Build
+
+* Update to jpl v2.6.2 ([8db42b67daf64567ca638c3fe621f208dd42f73f](https://github.com/red-panda-ci/jenkins-dind/commit/8db42b67daf64567ca638c3fe621f208dd42f73f))
+
+### Docs
+
+* Update README.md with Red Panda JPL ([407798e9722518d272324b1d76c6876458651dd0](https://github.com/red-panda-ci/jenkins-dind/commit/407798e9722518d272324b1d76c6876458651dd0))
+
+### Upgrade
+
+* Update to Jenkins Release v2.121.2 ([01005de7c795f7e06fe20aa19560723b5e7f6137](https://github.com/red-panda-ci/jenkins-dind/commit/01005de7c795f7e06fe20aa19560723b5e7f6137))
+
+
+
 <a name="2.107.1"></a>
 ## 2.107.1 (2018-03-18)
 
+
+### Build
+
+* Update CHANGELOG.md to v2.107.1 with Red Panda JPL ([245d3a5a0b39535b868db5f3f2e2895525ca0553](https://github.com/red-panda-ci/jenkins-dind/commit/245d3a5a0b39535b868db5f3f2e2895525ca0553))
 
 ### Docs
 
