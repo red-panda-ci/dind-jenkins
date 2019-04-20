@@ -22,7 +22,7 @@ docker run --privileged \\
 -p 8080:8080 \\
 -e JENKINS_USER=redpanda \\
 -e JENKINS_PASS=redpanda \\
--v my/volume:/root/.jenkins \\
+-v jenkins-dind:/root/.jenkins \\
 redpandaci/jenkins-dind:latest
 
 \`\`\`

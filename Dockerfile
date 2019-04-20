@@ -32,6 +32,9 @@ COPY src/set-user.groovy /root/.jenkins/init.groovy.d/basic-security.groovy
 # Neo theme
 COPY src/org.codefirst.SimpleThemeDecorator.xml /root/.jenkins/org.codefirst.SimpleThemeDecorator.xml
 
+# Change java_args
+RUN sed "s#JAVA_ARGS=\"-Djava.awt.headless=true\"#JAVA_ARGS=\"-Djava.awt.headless=true -Xmx256M\"#g" -i /etc/default/jenkins
+
 EXPOSE 8080
 
-CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
+CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war", "-Xmx256m"]
