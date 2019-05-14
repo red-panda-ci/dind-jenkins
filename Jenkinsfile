@@ -3,7 +3,7 @@
 @Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.7.0') _
 
 // Initialize global config
-cfg = jplConfig('jenkins-dind', 'docker', '', [slack: '#integrations', email:'redpandaci+jenkinsdind@gmail.com'])
+cfg = jplConfig('jenkins-dind', 'docker', '', [slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
 String jenkinsVersion
 
 pipeline {
@@ -52,7 +52,8 @@ pipeline {
             steps {
                 sh '''
                 make
-                if ! git diff-files --quiet --ignore-submodules -- ; then
+                if ! git diff-files --quiet
+                then
                     git add README.md
                     git commit -m "Docs: Update README.md with Red Panda JPL"
                     git push
