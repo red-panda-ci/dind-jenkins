@@ -61,7 +61,7 @@ pipeline {
                 '''
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", redpandaci-docker-credentials) {
-                        docker.build("redpandaci/jenkins-dind").push('jenkinsVersion')
+                        docker.build("redpandaci/jenkins-dind").push(jenkinsVersion)
                         docker.build("redpandaci/jenkins-dind").push('latest')
                     }
                 }
