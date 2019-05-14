@@ -1,6 +1,51 @@
+<a name="2.164.1"></a>
+## 2.164.1 (2019-05-14)
+
+
+### Build
+
+* Change docker build strategy ([f21bd0cb3b6522438c7fd003105d6aba6adb48d2](https://github.com/red-panda-ci/jenkins-dind/commit/f21bd0cb3b6522438c7fd003105d6aba6adb48d2))
+* Change docker build strategy ([76453c9af2a7f227e158f9da0cd27ddb2592a0f1](https://github.com/red-panda-ci/jenkins-dind/commit/76453c9af2a7f227e158f9da0cd27ddb2592a0f1))
+* Check git changes before commit ([6910b5f0ccd1e5ef183dbbe9d8c71f74715e7d52](https://github.com/red-panda-ci/jenkins-dind/commit/6910b5f0ccd1e5ef183dbbe9d8c71f74715e7d52))
+* Disable error check in commit step ([63484fff93c50994a7daab2aa72018dde985fd1c](https://github.com/red-panda-ci/jenkins-dind/commit/63484fff93c50994a7daab2aa72018dde985fd1c))
+* Disable slack notifications ([d33991239b7f668128e94f9906a5ad2514b4c007](https://github.com/red-panda-ci/jenkins-dind/commit/d33991239b7f668128e94f9906a5ad2514b4c007))
+* Disable test ([dd40348b44242247de048b3d06af7741e0652768](https://github.com/red-panda-ci/jenkins-dind/commit/dd40348b44242247de048b3d06af7741e0652768))
+* Don't clear cache on docker build in the last stage ([460e9b37e88d57899e911ed3fdd80e60b0a0cf40](https://github.com/red-panda-ci/jenkins-dind/commit/460e9b37e88d57899e911ed3fdd80e60b0a0cf40))
+* Enable cache in docker build step ([7b262e72db685f4b7715e4f5c6f0a3f39ed72389](https://github.com/red-panda-ci/jenkins-dind/commit/7b262e72db685f4b7715e4f5c6f0a3f39ed72389))
+* Fix docker build syntax ([e335d29e200f4d213ad752361a1aaa37c8a5b2cc](https://github.com/red-panda-ci/jenkins-dind/commit/e335d29e200f4d213ad752361a1aaa37c8a5b2cc))
+* Fix error when the commit is empty generating doc ([62dfd9ac68c48ea35f9020a59f0010a28665f70c](https://github.com/red-panda-ci/jenkins-dind/commit/62dfd9ac68c48ea35f9020a59f0010a28665f70c))
+* Fix typo, removing non-ascii character ([3f5102ed4bbc42f599c3fb1a943b43fd3d459184](https://github.com/red-panda-ci/jenkins-dind/commit/3f5102ed4bbc42f599c3fb1a943b43fd3d459184))
+* Refactor docker push step ([e24f5e8a5f5cd834fdeda4414cf03d7fd26965ac](https://github.com/red-panda-ci/jenkins-dind/commit/e24f5e8a5f5cd834fdeda4414cf03d7fd26965ac))
+* Refactor repository changes checking ([14ba79019caf8dedf9093687c9379f91df9c94e5](https://github.com/red-panda-ci/jenkins-dind/commit/14ba79019caf8dedf9093687c9379f91df9c94e5))
+* Remove line break on version file ([778938fd46479eac586a791279b7211ea381f6ec](https://github.com/red-panda-ci/jenkins-dind/commit/778938fd46479eac586a791279b7211ea381f6ec))
+* Set memory limit on java execution ([354db0735dfa107caec23c1d43a9dd9f988ee93b](https://github.com/red-panda-ci/jenkins-dind/commit/354db0735dfa107caec23c1d43a9dd9f988ee93b))
+* Typo in docker image name ([aa19de065eeb5f1e798f89b99409c8980e164b74](https://github.com/red-panda-ci/jenkins-dind/commit/aa19de065eeb5f1e798f89b99409c8980e164b74))
+* Update jpl version to v2.7.0 in pipeline ([1d7eb23bc03de8598473d2b9a82dacfe01bdb78a](https://github.com/red-panda-ci/jenkins-dind/commit/1d7eb23bc03de8598473d2b9a82dacfe01bdb78a))
+* Use docker.build --no-cache instead docker rmi ([b438996e338dbe96b326dffa94dd42085a45ba29](https://github.com/red-panda-ci/jenkins-dind/commit/b438996e338dbe96b326dffa94dd42085a45ba29))
+* Use docker.build inside script step ([9cc457e57d50bf6fe1af4031e3cc97fd4eae3fa2](https://github.com/red-panda-ci/jenkins-dind/commit/9cc457e57d50bf6fe1af4031e3cc97fd4eae3fa2))
+* Use Jenkins native docker build ([50f050adae0bac8aeb498284bb632742cfb4e3f8](https://github.com/red-panda-ci/jenkins-dind/commit/50f050adae0bac8aeb498284bb632742cfb4e3f8))
+* Use jpl docker build again ([018a8d5289afa54f4f109b8d5b069d8a3a966212](https://github.com/red-panda-ci/jenkins-dind/commit/018a8d5289afa54f4f109b8d5b069d8a3a966212))
+* Use right variable in docker build ([54a12cd0ebc196da8fd22f52a680aac0930f4b45](https://github.com/red-panda-ci/jenkins-dind/commit/54a12cd0ebc196da8fd22f52a680aac0930f4b45))
+
+### Docs
+
+* Update README.md with Red Panda JPL ([21262c284510c0bf93c80d4bde9c5c67564a0b7f](https://github.com/red-panda-ci/jenkins-dind/commit/21262c284510c0bf93c80d4bde9c5c67564a0b7f))
+* Update README.md with Red Panda JPL ([52ce19de5ecd22714515e986c97280b366f7a7f0](https://github.com/red-panda-ci/jenkins-dind/commit/52ce19de5ecd22714515e986c97280b366f7a7f0))
+
+### Upgrade
+
+* Set Jenkins release to v2.164.1 ([09b724ba00a111f38c503243042a48a9342b7f8b](https://github.com/red-panda-ci/jenkins-dind/commit/09b724ba00a111f38c503243042a48a9342b7f8b))
+* Use latest Jenins LTS release 2.164.1 ([67694837035d33f25a293311495fe891f4f4e77d](https://github.com/red-panda-ci/jenkins-dind/commit/67694837035d33f25a293311495fe891f4f4e77d))
+
+
+
 <a name="2.150.2"></a>
 ## 2.150.2 (2019-02-05)
 
+
+### Build
+
+* Update CHANGELOG.md to v2.150.2 with Red Panda JPL ([c08f466477b2e44e07c679b286342357da301650](https://github.com/red-panda-ci/jenkins-dind/commit/c08f466477b2e44e07c679b286342357da301650))
 
 ### Docs
 
