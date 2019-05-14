@@ -56,12 +56,8 @@ pipeline {
                 git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
                 git push
                 '''
-                script {
-                    docker.withRegistry("https://registry.hub.docker.com", redpandaci-docker-credentials) {
-                        docker.build("redpandaci/jenkins-dind").push(jenkinsVersion)
-                        docker.build("redpandaci/jenkins-dind").push('latest')
-                    }
-                }
+                jplDockerPush (cfg, "redpandaci/jenkins-dind", jenkinsVersion, ".", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
+                jplDockerPush (cfg, "redpandaci/jenkins-dind", "latest", ".", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 jplCloseRelease(cfg)
             }
         }
