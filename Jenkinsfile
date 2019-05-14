@@ -53,7 +53,7 @@ pipeline {
                 sh '''
                 make
                 git add README.md
-                git commit -m "Docs: Update README.md with Red Panda JPL" || true
+                git commit -m "Docs: Update README.md with Red Panda JPL" || true
                 git push || true
                 '''
                 script {
