@@ -52,12 +52,11 @@ pipeline {
             steps {
                 sh '''
                 make
-                if ! git diff-files --quiet
-                then
-                    git add README.md
-                    git commit -m "Docs: Update README.md with Red Panda JPL"
-                    git push
-                fi
+                set +e
+                git add README.md
+                git commit -m "Docs: Update README.md with Red Panda JPL"
+                git push
+                set -e
                 '''
                 script {
                     docker.withRegistry("https://registry.hub.docker.com", redpandaci-docker-credentials) {
