@@ -50,17 +50,16 @@ pipeline {
             agent { label 'docker' }
             when { expression { (cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v')) && cfg.promoteBuild.enabled } }
             steps {
-                sh '''
-                make
-                git add README.md
-                git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
-                git push
-                '''
                 script {
+                    sh '''
+                    make
+                    git add README.md
+                    git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
+                    git push
+                    '''
                     docker.withRegistry("https://registry.hub.docker.com", 'redpandaci-docker-credentials') {
-                        def app = docker.build("redpandaci/jenkins-dind:${jenkinsVersion}")
-                        app.push()
-                        app.push('latest')
+                        docker.build("redpandaci/jenkins-dind:latest").push()
+                        docker.build("redpandaci/jenkins-dind:${jenkinsVersion}").push()
                     }
                 }
                 jplCloseRelease(cfg)
