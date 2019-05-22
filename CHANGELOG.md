@@ -4,9 +4,16 @@
 
 ### Build
 
+* Enable test stage again ([18aecce](https://github.com:red-panda-ci/jenkins-dind/commit/18aecce))
+* Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([5cf54ed](https://github.com:red-panda-ci/jenkins-dind/commit/5cf54ed))
+* Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([1d44031](https://github.com:red-panda-ci/jenkins-dind/commit/1d44031))
 * Fix release finish stage to run in slaves ([9840db8](https://github.com:red-panda-ci/jenkins-dind/commit/9840db8))
 * Review pipeline to run on a slave node ([6afd586](https://github.com:red-panda-ci/jenkins-dind/commit/6afd586))
 * Remove make release step ([ad71ea6](https://github.com:red-panda-ci/jenkins-dind/commit/ad71ea6))
+
+### Docs
+
+* Generate v2.90.0 changelog with JPL ([7659e61](https://github.com:red-panda-ci/jenkins-dind/commit/7659e61))
 
 ## v2.90.0 (2019-05-22)
 
@@ -83,10 +90,18 @@
 
 ### Build
 
+* Enable test stage again ([18aecce](https://github.com:red-panda-ci/jenkins-dind/commit/18aecce))
+* Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([5cf54ed](https://github.com:red-panda-ci/jenkins-dind/commit/5cf54ed))
+* Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([1d44031](https://github.com:red-panda-ci/jenkins-dind/commit/1d44031))
 * Fix release finish stage to run in slaves ([9840db8](https://github.com:red-panda-ci/jenkins-dind/commit/9840db8))
 * Review pipeline to run on a slave node ([6afd586](https://github.com:red-panda-ci/jenkins-dind/commit/6afd586))
 * Remove make release step ([ad71ea6](https://github.com:red-panda-ci/jenkins-dind/commit/ad71ea6))
+* Update Auto Release Log adding v2.90.0 info with JPL ([eeeb3fc](https://github.com:red-panda-ci/jenkins-dind/commit/eeeb3fc))
 * Update to jpl v3.0.1 ([9f5e8fb](https://github.com:red-panda-ci/jenkins-dind/commit/9f5e8fb))
+
+### Docs
+
+* Generate v2.90.0 changelog with JPL ([7659e61](https://github.com:red-panda-ci/jenkins-dind/commit/7659e61))
 
 ## v2.164.1 (2019-05-14)
 
