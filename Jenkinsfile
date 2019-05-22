@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.7.0') _
+@Library('github.com/red-panda-ci/jenkins-pipeline-library@v3.0.1') _
 
 // Initialize global config
 cfg = jplConfig('jenkins-dind', 'docker', '', [slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
@@ -38,6 +38,14 @@ pipeline {
                 always {
                     sh 'docker rmi redpandaci/jenkins-dind:latest'
                 }
+            }
+        }
+        stage ('Make release'){
+            agent { label 'master' }
+            when { branch 'release/new' }
+            steps {
+                script { cfg.promoteBuild.enabled = true }
+                jplMakeRelease(cfg)
             }
         }
         stage ('Release confirm') {
@@ -78,7 +86,6 @@ pipeline {
         ansiColor('xterm')
         buildDiscarder(logRotator(artifactNumToKeepStr: '20',artifactDaysToKeepStr: '30'))
         disableConcurrentBuilds()
-        skipDefaultCheckout()
         timeout(time: 1, unit: 'DAYS')
     }
 }
