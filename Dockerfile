@@ -1,7 +1,7 @@
 FROM redpandaci/ubuntu-dind:latest
 
 # Prepare Jenkins package
-ENV JENKINS_VERSION 2.164.1
+ENV JENKINS_VERSION 2.164.3
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add - && \
     sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
@@ -32,6 +32,9 @@ COPY src/set-user.groovy /root/.jenkins/init.groovy.d/basic-security.groovy
 # Neo theme
 COPY src/org.codefirst.SimpleThemeDecorator.xml /root/.jenkins/org.codefirst.SimpleThemeDecorator.xml
 
+# Change java_args
+RUN sed "s#JAVA_ARGS=\"-Djava.awt.headless=true\"#JAVA_ARGS=\"-Djava.awt.headless=true -Xmx256M\"#g" -i /etc/default/jenkins
+
 EXPOSE 8080
 
-CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
+CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war", "-Xmx256m"]

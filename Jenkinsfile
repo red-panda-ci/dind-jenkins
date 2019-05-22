@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.7.0') _
+@Library('github.com/red-panda-ci/jenkins-pipeline-library@v3.0.1') _
 
 // Initialize global config
 cfg = jplConfig('jenkins-dind', 'docker', '', [slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
@@ -51,12 +51,12 @@ pipeline {
             when { expression { (cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v')) && cfg.promoteBuild.enabled } }
             steps {
                 script {
-                    sh '''
+                    sh """
+                    git checkout ${cfg.BRANCH_NAME}
                     make
                     git add README.md
                     git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
-                    git push
-                    '''
+                    """
                     docker.withRegistry("https://registry.hub.docker.com", 'redpandaci-docker-credentials') {
                         docker.build("redpandaci/jenkins-dind:latest").push()
                         docker.build("redpandaci/jenkins-dind:${jenkinsVersion}").push()
@@ -78,7 +78,6 @@ pipeline {
         ansiColor('xterm')
         buildDiscarder(logRotator(artifactNumToKeepStr: '20',artifactDaysToKeepStr: '30'))
         disableConcurrentBuilds()
-        skipDefaultCheckout()
         timeout(time: 1, unit: 'DAYS')
     }
 }
