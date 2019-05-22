@@ -40,14 +40,6 @@ pipeline {
                 }
             }
         }
-        stage ('Make release'){
-            agent { label 'master' }
-            when { branch 'release/new' }
-            steps {
-                script { cfg.promoteBuild.enabled = true }
-                jplMakeRelease(cfg)
-            }
-        }
         stage ('Release confirm') {
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
