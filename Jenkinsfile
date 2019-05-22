@@ -31,8 +31,7 @@ pipeline {
         stage ('Test') {
             agent { label 'docker' }
             steps  {
-                // Disable test on 2019-05-14
-                sh 'echo "bin/test.sh"'
+                sh 'bin/test.sh'
             }
             post {
                 always {
