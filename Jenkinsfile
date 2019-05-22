@@ -52,10 +52,10 @@ pipeline {
             steps {
                 script {
                     sh '''
+                    git checkout ${cfg.BRANCH_NAME}
                     make
                     git add README.md
                     git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
-                    git push
                     '''
                     docker.withRegistry("https://registry.hub.docker.com", 'redpandaci-docker-credentials') {
                         docker.build("redpandaci/jenkins-dind:latest").push()
