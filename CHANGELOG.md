@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Build
+
+* Fix release finish stage to run in slaves ([9840db8](https://github.com:red-panda-ci/jenkins-dind/commit/9840db8))
+* Review pipeline to run on a slave node ([6afd586](https://github.com:red-panda-ci/jenkins-dind/commit/6afd586))
+* Remove make release step ([ad71ea6](https://github.com:red-panda-ci/jenkins-dind/commit/ad71ea6))
+
 ## v2.90.0 (2019-05-22)
 
 ### New
@@ -58,6 +66,27 @@
 * Update README.md with Red Panda JPL ([37db3fb](https://github.com:red-panda-ci/jenkins-dind/commit/37db3fb))
 * Update README.md with Red Panda JPL ([407798e](https://github.com:red-panda-ci/jenkins-dind/commit/407798e))
 * Update README.md with Red Panda JPL ([7f59280](https://github.com:red-panda-ci/jenkins-dind/commit/7f59280))
+
+## v2.164.3 (2019-05-22)
+
+### New
+
+* Add ssh-agent plugin ([daf6b92](https://github.com:red-panda-ci/jenkins-dind/commit/daf6b92))
+
+### Upgrade
+
+* Use latest Jenkins LTS release v2.164.3 ([68aca91](https://github.com:red-panda-ci/jenkins-dind/commit/68aca91))
+
+### Update
+
+* Add memory limit to nested java process ([5aab4fd](https://github.com:red-panda-ci/jenkins-dind/commit/5aab4fd))
+
+### Build
+
+* Fix release finish stage to run in slaves ([9840db8](https://github.com:red-panda-ci/jenkins-dind/commit/9840db8))
+* Review pipeline to run on a slave node ([6afd586](https://github.com:red-panda-ci/jenkins-dind/commit/6afd586))
+* Remove make release step ([ad71ea6](https://github.com:red-panda-ci/jenkins-dind/commit/ad71ea6))
+* Update to jpl v3.0.1 ([9f5e8fb](https://github.com:red-panda-ci/jenkins-dind/commit/9f5e8fb))
 
 ## v2.164.1 (2019-05-14)
 

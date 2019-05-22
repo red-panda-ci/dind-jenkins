@@ -40,14 +40,6 @@ pipeline {
                 }
             }
         }
-        stage ('Make release'){
-            agent { label 'master' }
-            when { branch 'release/new' }
-            steps {
-                script { cfg.promoteBuild.enabled = true }
-                jplMakeRelease(cfg)
-            }
-        }
         stage ('Release confirm') {
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
@@ -59,12 +51,12 @@ pipeline {
             when { expression { (cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v')) && cfg.promoteBuild.enabled } }
             steps {
                 script {
-                    sh '''
+                    sh """
+                    git checkout ${cfg.BRANCH_NAME}
                     make
                     git add README.md
                     git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
-                    git push
-                    '''
+                    """
                     docker.withRegistry("https://registry.hub.docker.com", 'redpandaci-docker-credentials') {
                         docker.build("redpandaci/jenkins-dind:latest").push()
                         docker.build("redpandaci/jenkins-dind:${jenkinsVersion}").push()
