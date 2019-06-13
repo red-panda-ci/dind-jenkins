@@ -1,9 +1,15 @@
 # Changelog
 
-## Unreleased
+## v2.90.1 (2019-06-13)
 
 ### Build
 
+* Update Auto Release Log adding v2.90.1 info with JPL ([936da2a](https://github.com:red-panda-ci/jenkins-dind/commit/936da2a))
+* Fix parameter usage in publishDocumentation function ([783598a](https://github.com:red-panda-ci/jenkins-dind/commit/783598a))
+* Use jenkinsVersion as parameter ([c349e54](https://github.com:red-panda-ci/jenkins-dind/commit/c349e54))
+* Use docker node in auto-release stage ([d86d75b](https://github.com:red-panda-ci/jenkins-dind/commit/d86d75b))
+* Add auto-release stage ([eac8797](https://github.com:red-panda-ci/jenkins-dind/commit/eac8797))
+* Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([0516a8c](https://github.com:red-panda-ci/jenkins-dind/commit/0516a8c))
 * Enable test stage again ([18aecce](https://github.com:red-panda-ci/jenkins-dind/commit/18aecce))
 * Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([5cf54ed](https://github.com:red-panda-ci/jenkins-dind/commit/5cf54ed))
 * Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([1d44031](https://github.com:red-panda-ci/jenkins-dind/commit/1d44031))
@@ -90,6 +96,7 @@
 
 ### Build
 
+* Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([0516a8c](https://github.com:red-panda-ci/jenkins-dind/commit/0516a8c))
 * Enable test stage again ([18aecce](https://github.com:red-panda-ci/jenkins-dind/commit/18aecce))
 * Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([5cf54ed](https://github.com:red-panda-ci/jenkins-dind/commit/5cf54ed))
 * Update CHANGELOG.md to v2.164.3 with Red Panda JPL ([1d44031](https://github.com:red-panda-ci/jenkins-dind/commit/1d44031))

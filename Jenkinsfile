@@ -1,10 +1,25 @@
 #!groovy
 
-@Library('github.com/red-panda-ci/jenkins-pipeline-library@v3.0.1') _
+@Library('github.com/red-panda-ci/jenkins-pipeline-library@v3.1.6') _
 
 // Initialize global config
 cfg = jplConfig('jenkins-dind', 'docker', '', [slack: '', email:'redpandaci+jenkinsdind@gmail.com'])
 String jenkinsVersion
+
+def publishDocumentation() {
+    sh """
+    git checkout ${cfg.BRANCH_NAME}
+    make
+    git add README.md
+    git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
+    """
+}
+def publishDockerImage(String jenkinsVersion) {
+    docker.withRegistry("https://registry.hub.docker.com", 'redpandaci-docker-credentials') {
+        docker.build("redpandaci/jenkins-dind:latest").push()
+        docker.build("redpandaci/jenkins-dind:${jenkinsVersion}").push()
+    }
+}
 
 pipeline {
     agent none
@@ -39,7 +54,18 @@ pipeline {
                 }
             }
         }
+        stage ('Make release'){
+            // -------------------- automatic release -------------------
+            agent { label 'docker' }
+            when { branch 'release/new' }
+            steps {
+                publishDocumentation()
+                publishDockerImage(jenkinsVersion)
+                jplMakeRelease(cfg, true)
+            }
+        }
         stage ('Release confirm') {
+            // -------------------- manual release -------------------
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 jplPromoteBuild(cfg)
@@ -49,18 +75,8 @@ pipeline {
             agent { label 'docker' }
             when { expression { (cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v')) && cfg.promoteBuild.enabled } }
             steps {
-                script {
-                    sh """
-                    git checkout ${cfg.BRANCH_NAME}
-                    make
-                    git add README.md
-                    git diff-files --quiet || git commit -m "Docs: Update README.md with Red Panda JPL"
-                    """
-                    docker.withRegistry("https://registry.hub.docker.com", 'redpandaci-docker-credentials') {
-                        docker.build("redpandaci/jenkins-dind:latest").push()
-                        docker.build("redpandaci/jenkins-dind:${jenkinsVersion}").push()
-                    }
-                }
+                publishDocumentation(jenkinsVersion)
+                publishDockerImage(jenkinsVersion)
                 jplCloseRelease(cfg)
             }
         }
