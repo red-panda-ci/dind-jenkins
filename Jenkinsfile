@@ -54,16 +54,6 @@ pipeline {
                 }
             }
         }
-        stage ('Make release'){
-            // -------------------- automatic release -------------------
-            agent { label 'docker' }
-            when { branch 'release/new' }
-            steps {
-                publishDocumentation()
-                publishDockerImage(jenkinsVersion)
-                jplMakeRelease(cfg, true)
-            }
-        }
         stage ('Release confirm') {
             // -------------------- manual release -------------------
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
