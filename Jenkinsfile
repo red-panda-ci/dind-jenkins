@@ -56,7 +56,7 @@ pipeline {
         }
         stage ('Make release'){
             // -------------------- automatic release -------------------
-            agent { label 'master' }
+            agent { label 'docker' }
             when { branch 'release/new' }
             steps {
                 publishDocumentation()
