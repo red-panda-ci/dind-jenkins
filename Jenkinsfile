@@ -59,7 +59,7 @@ pipeline {
             agent { label 'docker' }
             when { branch 'release/new' }
             steps {
-                publishDocumentation(jenkinsVersion)
+                publishDocumentation()
                 publishDockerImage(jenkinsVersion)
                 jplMakeRelease(cfg, true)
             }
