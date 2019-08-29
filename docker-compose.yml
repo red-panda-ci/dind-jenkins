@@ -2,7 +2,7 @@ version: '3.4'
 services:
 
   jenkins-dind:
-    image: redpandaci/jenkins-dind:2.164.1
+    image: redpandaci/jenkins-dind:2.176.3
     privileged: true
     tty: true
     ports:
